@@ -1,0 +1,47 @@
+# Wagner Lima, site de uma pagina em 72 horas
+# https://site.seugestordemarketing.com.br/
+
+User-agent: *
+Allow: /
+
+# Buscadores com IA: liberados de proposito, para poderem citar a pagina
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://site.seugestordemarketing.com.br/sitemap.xml

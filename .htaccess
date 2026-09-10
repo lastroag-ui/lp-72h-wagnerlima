@@ -1,0 +1,37 @@
+# LP de 72h do Wagner Lima
+# Equivalente, para Apache e LiteSpeed (Hostinger), do arquivo _headers,
+# que so funciona na Cloudflare Pages. Pode apagar o _headers se quiser.
+
+# Tipo e charset dos arquivos de texto
+AddType text/plain .txt
+AddCharset utf-8 .txt
+AddType application/xml .xml
+AddCharset utf-8 .xml
+
+# Pagina de erro
+ErrorDocument 404 /404.html
+
+# Cache
+<IfModule mod_headers.c>
+  # Icones da raiz: 7 dias
+  <FilesMatch "^(apple-touch-icon\.png|wl-simbolo-3\.(png|ico))$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+
+  # favicon, robots, llms e sitemap: 1 hora
+  <FilesMatch "^(favicon\.ico|robots\.txt|llms\.txt|sitemap\.xml)$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+
+  # HTML sempre fresco
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Compressao
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>

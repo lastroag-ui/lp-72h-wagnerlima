@@ -1,0 +1,6 @@
+# Imagens e arquivos estaticos: cache de 1 ano.
+# Se trocar uma imagem, troque tambem o nome do arquivo, senao o navegador
+# de quem ja visitou continua mostrando a antiga.
+<IfModule mod_headers.c>
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</IfModule>
