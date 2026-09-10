@@ -14,18 +14,17 @@ Jogue o conteudo da raiz do repositorio na raiz do subdominio (o
 
 No hPanel: **Avancado > Git**.
 
-1. Repositorio: a URL SSH deste repo
+1. Repositorio: `https://github.com/lastroag-ui/lp-72h-wagnerlima.git`
 2. Branch: `main`
 3. Diretorio: a pasta do subdominio
-4. O painel gera uma **chave SSH**. Copie ela e mande pra gente, que
-   cadastramos aqui como *deploy key* (o repo e privado, sem a chave o
-   painel nao consegue clonar).
-5. Depois de criado, o painel mostra um **webhook**. Manda ele pra
-   gente tambem, que a gente pluga aqui no GitHub. A partir disso todo
-   push na `main` publica sozinho.
 
-Sem o passo 5 ainda funciona, so nao e automatico: e clicar em
-**Deploy** no painel quando quiser atualizar.
+O repo e publico, entao nao precisa de chave nenhuma: o painel clona
+direto. Clique em **Create** e depois em **Deploy**.
+
+Para publicar sozinho a cada push, o painel mostra um **webhook** depois
+de criado. Manda ele pra gente, que a gente pluga aqui no GitHub. Sem
+isso ainda funciona, so nao e automatico: e clicar em **Deploy** no
+painel quando quiser atualizar.
 
 ## Atencao, o ponto que mais quebra
 
